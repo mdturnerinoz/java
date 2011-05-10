@@ -1,0 +1,30 @@
+<project name="hello" default="clean" basedir=".">
+    <description>
+        simple example build file using hello.java
+    </description>
+
+    <target name="clean">
+        <delete file="hello.jar"/>
+        <delete file="hello.class"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="."/>
+        <javac srcdir="." destdir="."/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="."/>
+        <jar destfile="hello.jar" basedir=".">
+            <manifest>
+                <attribute name="Main-Class" value="oata.hello"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="hello.jar" fork="true"/>
+    </target>
+
+</project>
+
