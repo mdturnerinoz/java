@@ -3,3 +3,5 @@ hello
 *.o
 *~
 ._*
+*.jar
+*.class
