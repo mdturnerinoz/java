@@ -1,4 +1,4 @@
-<project name="hello" default="clean" basedir=".">
+<project name="hello" default="all" basedir=".">
     <description>
         simple example build file using hello.java
     </description>
@@ -6,6 +6,7 @@
     <target name="clean">
         <delete file="hello.jar"/>
         <delete file="hello.class"/>
+        <delete file="build.xml~"/>
     </target>
 
     <target name="compile">
@@ -13,17 +14,20 @@
         <javac srcdir="." destdir="."/>
     </target>
 
-    <target name="jar">
+    <target name="jar" depends="compile">
         <mkdir dir="."/>
         <jar destfile="hello.jar" basedir=".">
             <manifest>
-                <attribute name="Main-Class" value="oata.hello"/>
+                <attribute name="Main-Class" value="hello"/>
             </manifest>
         </jar>
     </target>
 
-    <target name="run">
+    <target name="run" depends="jar">
         <java jar="hello.jar" fork="true"/>
+    </target>
+    
+    <target name="all" depends="run">
     </target>
 
 </project>
