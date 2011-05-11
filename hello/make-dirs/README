@@ -1,10 +1,19 @@
 The make file in this directory builds the java code and places it in an archive using multiple sub-dirs.
 
-src		(the source directory for the java code)
-build 		(the class directory)
-dist		(the jar direcotry)
+files:
+
+hello.mf      (java manifest file used to make archvie (jar))
+makefile      (makefile used to make the class/jar files)
+README        (this file)
+
+direcories:
+
+src	      (the source directory for the java code)
+build 	      (the class directory (does not exist until makefile run))
+dist	      (the jar direcotry (does not exist until makefile run)))
 
 make          (defaults to all)
+make all      (makes compile, jar, and run)
 make compile  (compiles the code)
 make jar      (builds the java archive)
 make run      (runs the code)

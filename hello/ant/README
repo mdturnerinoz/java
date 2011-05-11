@@ -1,5 +1,12 @@
 This project provides examples of how to build java code with apache ant.
 
+files:
+
+build.xml  (ant "makefile")
+hello.java (java source)
+hello.mf   (java manifest file needed for building the jar)
+README	   (this file)
+
 examples:
 
 ant 	    (not parameter defaults to "all")
@@ -7,3 +14,5 @@ ant compile (compiles the java source)
 ant jar     (builds a java archive)
 ant clean   (cleans the directory)
 ant all     (compile and jar)
+
+N.B. This directory assumes you have apache ant installed. If it is not, then consult your distro's packaging system or visit http://ant.apache.org/ to install it yourself.

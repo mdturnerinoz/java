@@ -1,6 +1,16 @@
 The make file in this directory builds the java code and places it in an archive using just the current directory (and no sub-dirs).
 
+files:
+
+hello.java  (java source)
+hello.mf    (java manifest used to build the java archive)
+makefile    (makefile)
+README      (this file)
+
+usage:
+
 make          (defaults to all)
+make all      (makes compil, jar, and run)
 make compile  (compiles the code)
 make jar      (builds the java archive)
 make run      (runs the code)
