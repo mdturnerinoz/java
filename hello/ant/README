@@ -1,0 +1,9 @@
+This project provides examples of how to build java code with apache ant.
+
+examples:
+
+ant 	    (not parameter defaults to "all")
+ant compile (compiles the java source)
+ant jar     (builds a java archive)
+ant clean   (cleans the directory)
+ant all     (compile and jar)

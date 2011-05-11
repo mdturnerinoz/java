@@ -1,0 +1,7 @@
+The make file in this directory builds the java code and places it in an archive using just the current directory (and no sub-dirs).
+
+make          (defaults to all)
+make compile  (compiles the code)
+make jar      (builds the java archive)
+make run      (runs the code)
+make clean    (cleans up the directory)
